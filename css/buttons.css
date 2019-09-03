@@ -1,0 +1,17 @@
+.holder {
+    position: relative;
+    left: 50px;
+    top: 50px;
+    height: 512px;
+    width: 512px;
+}
+
+
+
+.button_location {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    height: 50px;
+    width: 50px;
+}

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Buttons</title>
+  <meta name="description" content="">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="css/buttons.css">
+  <!-- <script src="js/buttons.js"></script> -->
+<script>
+    function onImg(){
+        this.setAttribute("src","images/license_on.png")
+    }
+
+    function offImg(){
+        this.setAttribute("src","images/license_off.png")
+    }
+</script>
+
+</head>
+
+<body>
+    <p>
+        <img id = "license" src="images/license_off.png" onmouseover = "onImg.call(this)" style="cursor: pointer;"/>
+        <img id = "location" src="images/location_off.png" onmouseover = "onImg.call(this)" style="cursor: pointer;"/>
+        <img id = "user" src="images/user_off.png">
+        <img id = "userMany" src="images/userMany_off.png">
+     </p>
+     <p>
+        <img id = "radio" src="images/radio_off.png">
+        <img id = "radioSquare" src="images/radioSquare_off.png">
+
+</body>
+</html>

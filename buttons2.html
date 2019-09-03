@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Buttons</title>
+  <meta name="description" content="">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="css/buttons.css">
+  <!-- <script src="js/buttons.js"></script> -->
+<script>
+    function switchImage(){
+        var selectedImage = this;
+        var noSwitchImages = document.getElementsByClassName("only-one");
+
+        for(var c = 0; c < noSwitchImages.length; c++){
+            var indexedImage = noSwitchImages[c];
+            var indexedSrc = indexedImage.getAttribute("src");
+            var prependPath = indexedSrc.slice(0, indexedSrc.indexOf("_"));
+            var srcExt = indexedSrc.substr(indexedSrc.indexOf("."));
+            var targetState = "off";
+            if (selectedImage === indexedImage){
+                targetState = "on";
+            }
+            indexedImage.setAttribute("src", prependPath + "_" + targetState + srcExt);
+        }
+    }
+
+    /* function diffImage(img) 
+    {
+        if(img.src.match(images/license_off.png)) {
+            img.src = "images/license_on.png";
+        }      
+        else {
+            img.src = "images/license_off.png";
+        }
+    } */
+
+</script>
+
+</head>
+
+<body>
+    <div class="holder">
+        <div class="oneOnButtons">
+            <img id="license" class="only-one" src="images/license_on.png" onclick ="switchImage.call(this)" style="cursor: pointer"/>
+            <img id="location" class="only-one" src="images/location_off.png" onclick="switchImage.call(this)" style="cursor: pointer">
+        </div>
+    </div>
+     <p>
+        <img id = "radio" src="images/radio_off.png">
+        <img id = "radioSquare" src="images/radioSquare_off.png">
+    </p>
+</body>
+</html>
